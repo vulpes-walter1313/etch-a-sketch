@@ -1,0 +1,27 @@
+:root {
+  --white: rgb(230,230,230);
+  --bg-color: rgb(45, 45, 45);
+  --cell-color: #EFFFA8;
+}
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+h1 {
+  font-size: 3rem;
+  margin: 1em 2em;
+  text-align: center;
+  color: var(--white);
+}
+html {
+  background-color: var(--bg-color);
+}
+#grid {
+  width: 80vw;
+  margin: 0 auto;
+}
+.cell {
+  background-color: var(--cell-color);
+}
