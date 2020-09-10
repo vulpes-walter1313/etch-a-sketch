@@ -30,5 +30,5 @@ button {
 }
 .cell {
   background-color: var(--cell-color);
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
