@@ -11,9 +11,34 @@ function createGrid() {
   for (let i = 0; i < 256; i++) {
     let gridDiv = document.createElement("div");
     gridDiv.classList.add("cell");
-    gridDiv.textContent = "Div";
+    // gridDiv.textContent = "a";
     gridDisplay.appendChild(gridDiv);
   }
 }
 
+function turnCellBlack(cell) {
+  cell.style.setProperty("background-color", "black");
+}
+
+function resetCells() {
+  const cells = document.querySelectorAll(".cell");
+  // cells.removeAttribute("style");
+  cells.forEach(cell => {
+    cell.removeAttribute("style");
+  })
+}
+
 createGrid();
+
+const gridCells = document.querySelectorAll(".cell");
+console.log(gridCells);
+gridCells.forEach(cell => {
+  cell.addEventListener('mouseover', () => {
+    turnCellBlack(cell);
+  });
+});
+
+const resetButton = document.querySelector("#reset-btn");
+resetButton.addEventListener("click", () => {
+  resetCells();
+});
